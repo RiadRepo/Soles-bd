@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className="h-[800px] mx-auto w-full max-w-screen-xl px-5">
+      <div className="h-[800px] mx-auto w-full max-w-screen-xl px-5 ">
         Working
       </div>
       <Footer />

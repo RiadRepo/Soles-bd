@@ -72,7 +72,7 @@ export default function Navbar() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="relative rounded-full bg-gray-800 p-1 px-4 text-gray-400 hover:text-white "
+                  className="relative rounded-full bg-gray-800 p-1 px-4 text-gray-400 hover:text-white hidden sm:inline-block"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View Cart</span>
@@ -80,7 +80,7 @@ export default function Navbar() {
                 </button>
                 <button
                   type="button"
-                  className="relative rounded-full bg-gray-800 p-1 px-4 text-gray-400 hover:text-white "
+                  className="relative rounded-full bg-gray-800 p-1 px-4 text-gray-400 hover:text-white hidden sm:inline-block"
                 >
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">View Cart</span>
@@ -89,7 +89,7 @@ export default function Navbar() {
 
                 <button
                   type="button"
-                  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
                   Log In
                 </button>
