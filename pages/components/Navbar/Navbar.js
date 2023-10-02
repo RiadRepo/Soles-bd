@@ -12,8 +12,8 @@ import {
 const navigation = [
   { name: "Home", href: "#", current: false },
   { name: "New Arrivals", href: "#", current: false },
-  { name: "Solid T-shirt", href: "#", current: false },
-  { name: "Printed T-shirt", href: "#", current: false },
+  { name: "Men's", href: "#", current: false },
+  { name: "Kids", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -89,7 +89,7 @@ export default function Navbar() {
 
                 <button
                   type="button"
-                  class="text-white bg-transparent hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  className="text-white bg-transparent hover:bg-gray-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
                   Log In
                 </button>
