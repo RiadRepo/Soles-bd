@@ -6,7 +6,7 @@ export default function Hero() {
     backgroundSize: "cover", // You can adjust background properties as needed
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
-    minHeight: "400px", // Set a minimum height to ensure the content is visible
+    // minHeight: "924px", // Set a minimum height to ensure the content is visible
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -14,6 +14,7 @@ export default function Hero() {
     fontSize: "24px", // Font size for the content
     fontWeight: "bold",
     backgroundColor: "rgba(0, 0, 0, 0.5)",
+    width: "100%",
   };
   const overlayStyle = {
     position: "absolute",
@@ -27,7 +28,7 @@ export default function Hero() {
   };
 
   return (
-    <section style={heroStyle} className="h-[1000px] relative">
+    <section style={heroStyle} className="h-[1070px] relative">
       <div style={overlayStyle}>{/* <div>Create Your Own Style</div> */}</div>
     </section>
   );
