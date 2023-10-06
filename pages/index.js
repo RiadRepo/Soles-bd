@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Home/Hero";
 import NewArrival from "./components/Home/NewArrival";
+import TopCategories from "./components/Home/TopCategories";
+import BestSelling from "./components/Home/BestSelling";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +18,8 @@ export default function Home() {
 
       <Hero />
       <NewArrival />
+      <TopCategories />
+      <BestSelling />
       <Footer />
     </main>
   );
