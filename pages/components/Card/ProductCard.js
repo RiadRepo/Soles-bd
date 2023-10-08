@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
   const { imageSrc, productName, rating, price, addToCartLink } = product;
 
   return (
-    <Card className="w-full md:w-96 h-180">
+    <Card className="w-full ">
       <CardHeader shadow={false} floated={false} className="h-full">
         <img
           src={imageSrc}
@@ -38,8 +38,7 @@ export default function ProductCard({ product }) {
           color="gray"
           className="font-normal opacity-75"
         >
-          With plenty of talk and listen time, voice-activated Siri access, and
-          an available wireless charging case.
+          SolesBD
         </Typography>
       </CardBody>
       <CardFooter className="pt-0">

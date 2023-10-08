@@ -5,7 +5,7 @@ export default function NewArrival() {
   const products = [
     {
       imageSrc: "/Carousel/001.jpeg",
-      productName: "White Jersey Polo",
+      productName: "White Jersey Polo Jersey Polo",
       rating: 5.0,
       price: "৳599",
       addToCartLink: "#",
@@ -78,7 +78,7 @@ export default function NewArrival() {
       const startIndex = currentIndex;
       const endIndex =
         currentIndex +
-        (window.innerWidth >= 768 // You can adjust the screen width breakpoint as needed
+        (window.innerWidth >= 960 // You can adjust the screen width breakpoint as needed
           ? largeScreenItemsPerPage
           : smallScreenItemsPerPage);
 
@@ -123,17 +123,51 @@ export default function NewArrival() {
 
   return (
     <section className="relative">
-      <h1 className="text-center text-4xl font-semibold">New Arrival</h1>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 ">
+      <h1 className="text-center text-4xl font-semibold py-6 xl:py-12 md:py-6 ">
+        New Arrival
+      </h1>
+      <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 ">
         {visibleProducts.map((product, index) => (
           <div key={index}>
             <ProductCard product={product} />
           </div>
         ))}
-      </div>
-      <div className="flex justify-between">
-        <button onClick={handlePrev}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+        <div className="absolute w-full top-1/2 flex justify-between items-center ">
+          <button onClick={handlePrev}>
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 8 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
+              />
+            </svg>
+          </button>
+          <button onClick={handleNext}>
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 8 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );
