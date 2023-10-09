@@ -1,27 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Hero() {
-  // const heroStyle = {
-  //   backgroundImage: `url('/images/Hero-Bg.jpeg')`, // Adjust the path to your image
-  //   backgroundSize: "cover", // You can adjust background properties as needed
-  //   backgroundRepeat: "no-repeat",
-  //   backgroundPosition: "center center",
-  //   // // display: "flex",
-  //   // // justifyContent: "center",
-  //   // // alignItems: "center",
-  //   // color: "white", // Text color on the background
-  //   // fontSize: "24px", // Font size for the content
-  //   // fontWeight: "bold",
-  //   backgroundColor: "rgba(0, 0, 0, 0.5)",
-  //   width: "100%",
-  //   height: "100vh",
-  // };
+  const featuredImages = [
+    "/images/Hero-Bg.jpeg",
+    "/images/bg-1.jpg",
+    "/images/bg-2.jpg",
+    "/images/Hero-Bg.jpeg",
+    "/images/bg-1.jpg",
+    "/images/bg-2.jpg",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleOnNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % featuredImages.length);
+  };
+
+  const handleOnPrevClick = () => {
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + featuredImages.length) % featuredImages.length
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleOnNextClick();
+    }, 4000);
+
+    return () => {
+      // Clear the interval when the component unmounts or when currentIndex changes
+      clearInterval(interval);
+    };
+  }, [currentIndex]);
 
   return (
     <section className="relative pt-12">
-      <img src="/images/Hero-Bg.jpeg" className="h-auto w-screen" />
-      {/* <div>Create Your Own Style</div> */}
-      {/* </div> */}
+      <img src={featuredImages[currentIndex]} className="h-auto w-screen" />
     </section>
   );
 }

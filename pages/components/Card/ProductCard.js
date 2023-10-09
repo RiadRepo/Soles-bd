@@ -21,7 +21,7 @@ export default function ProductCard({ product }) {
         <img
           src={imageSrc}
           alt="card-image"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-transform transform scale-100 hover:scale-105"
         />
       </CardHeader>
       <CardBody>

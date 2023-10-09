@@ -17,7 +17,7 @@ export default function CategoriesCard({ category }) {
   return (
     <Card
       shadow={false}
-      className="relative grid h-full max-h-[32rem] w-full max-w-[20rem] items-end justify-center overflow-hidden text-center"
+      className="relative grid  h-full  xl:h-80 max-h-[32rem] w-full max-w-[28rem] items-end justify-center overflow-hidden text-center"
     >
       <CardHeader
         floated={false}
