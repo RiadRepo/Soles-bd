@@ -35,7 +35,7 @@ export default function Hero() {
   }, [currentIndex]);
 
   return (
-    <section className="relative pt-12">
+    <section className="relative">
       <img src={featuredImages[currentIndex]} className="h-auto w-screen" />
     </section>
   );

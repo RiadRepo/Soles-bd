@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main>
-      <div className="absolute top-0 left-0 w-full">
+      <div className="z-40 sticky top-0 left-0 w-full ">
         <Navbar />
       </div>
 
