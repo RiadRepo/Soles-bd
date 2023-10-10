@@ -13,7 +13,8 @@ export default function ProductCard({ product }) {
     // Handle the case where product or imageSrc is missing
     return null; // Skip rendering the card
   }
-  const { imageSrc, productName, rating, price, addToCartLink } = product;
+  const { imageSrc, productName, rating, price, addToCartLink, discount } =
+    product;
 
   return (
     <Card className="w-full ">
@@ -29,17 +30,28 @@ export default function ProductCard({ product }) {
           <Typography color="blue-gray" className="font-medium">
             {productName}
           </Typography>
-          <Typography color="blue-gray" className="font-medium">
+          {/* <Typography color="blue-gray" className="font-medium">
             {price}
-          </Typography>
+          </Typography> */}
         </div>
         <Typography
           variant="small"
           color="gray"
-          className="font-normal opacity-75"
+          className="font-normal opacity-75 mb-2"
         >
           SolesBD
         </Typography>
+        <div className="flex">
+          <Typography
+            color="blue-gray"
+            className="font-light me-3 line-through"
+          >
+            Tk {discount}
+          </Typography>
+          <Typography color="blue-gray" className="font-medium">
+            Tk {price}
+          </Typography>
+        </div>
       </CardBody>
       <CardFooter className="pt-0">
         <Button

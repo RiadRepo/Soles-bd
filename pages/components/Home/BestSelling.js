@@ -8,63 +8,72 @@ export default function BestSelling() {
       imageSrc: "/Carousel/001.jpeg",
       productName: "White Jersey Polo Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/002.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/003.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/001.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/002.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/002.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/003.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/001.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
     {
       imageSrc: "/Carousel/002.jpeg",
       productName: "White Jersey Polo",
       rating: 5.0,
-      price: "৳599",
+      price: "599",
+      discount: "499",
       addToCartLink: "#",
     },
   ];
@@ -85,20 +94,18 @@ export default function BestSelling() {
   const visibleProducts = products.slice(startIndex, endIndex);
 
   const handleNext = () => {
-    // Calculate the next index to display
-    const nextIndex =
-      currentIndex + largeScreenItemsPerPage < products.length
-        ? currentIndex + largeScreenItemsPerPage
-        : 0;
+    // Calculate the next index to display, using modulo to wrap around
+    let nextIndex = (currentIndex + 1) % products.length;
+    if (nextIndex == 5) {
+      nextIndex = 0;
+    }
     setCurrentIndex(nextIndex);
   };
 
   const handlePrev = () => {
-    // Calculate the previous index to display
-    const prevIndex =
-      currentIndex - largeScreenItemsPerPage >= 0
-        ? currentIndex - largeScreenItemsPerPage
-        : products.length - (products.length % largeScreenItemsPerPage);
+    // Calculate the previous index to display, using modulo to wrap around
+    const prevIndex = (currentIndex - 1 + products.length) % products.length;
+    // console.log(prevIndex);
     setCurrentIndex(prevIndex);
   };
 
@@ -109,7 +116,7 @@ export default function BestSelling() {
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 ">
         {visibleProducts.map((product, index) => (
-          <div key={index}>
+          <div key={index} className="mx-1">
             <ProductCard product={product} />
           </div>
         ))}
