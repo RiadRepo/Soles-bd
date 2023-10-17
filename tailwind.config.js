@@ -9,7 +9,7 @@ module.exports = withMT({
   ],
   theme: {
     screens: {
-      xs: [{ max: "475px", min: "0px" }],
+      xs: [{ max: "639px", min: "0px" }],
     },
     extend: {
       backgroundImage: {
