@@ -25,7 +25,7 @@ export default function ProductCard({ product }) {
           className="h-full w-full object-cover transition-transform transform scale-100 hover:scale-105"
         />
       </CardHeader>
-      <CardBody>
+      <CardBody className="xs:h-40 lg:h-40">
         <div className="mb-2 flex items-center justify-between">
           <Typography color="blue-gray" className="font-medium">
             {productName}

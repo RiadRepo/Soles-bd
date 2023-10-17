@@ -115,7 +115,7 @@ export default function NewArrival() {
       <h1 className="text-center text-4xl font-semibold py-6 xl:py-12 md:py-6 ">
         New Arrival
       </h1>
-      <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 ">
+      <div className="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5  ">
         {visibleProducts.map((product, index) => (
           <div key={index}>
             <ProductCard product={product} />
