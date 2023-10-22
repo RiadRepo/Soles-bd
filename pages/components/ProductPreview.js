@@ -1,13 +1,20 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function ProductPreview({ product }) {
+  const router = useRouter();
   if (!product || !product.imageSrc) {
     // Handle the case where product or imageSrc is missing
     return null; // Skip rendering the card
   }
   const { imageSrc, productName, rating, price, addToCartLink, discount } =
     product;
+
+  const Checkout = () => {
+    router.push("/checkout");
+  };
+
   return (
     <section class="overflow-hidden">
       <div class="mx-auto max-w-5xl px-5 py-24 sm:py-0 xs:py-0">
@@ -220,6 +227,7 @@ export default function ProductPreview({ product }) {
               </button>
               <button
                 type="button"
+                onClick={Checkout}
                 class="w-full h-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
                 Buy Now
